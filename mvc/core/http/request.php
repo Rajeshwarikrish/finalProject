@@ -33,3 +33,5 @@ class request
         }
         return $action;
     }
+}
+?>

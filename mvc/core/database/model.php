@@ -4,7 +4,8 @@ use http\controller;
 abstract class model
 {
     public function save()
-    {
+    {   
+        $INSERT = FALSE;
         if($this->validate() == FALSE) {
             echo 'failed validation';
             exit;

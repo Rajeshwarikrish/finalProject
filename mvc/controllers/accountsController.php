@@ -98,7 +98,7 @@ class accountsController extends http\controller
             echo 'user not found';
         } else {
             if($user->checkPassword($_POST['password']) == TRUE) {
-                echo 'login';
+                echo '<h1>login successful</h1>!<BR>';
                 session_start();
                 $_SESSION["userID"] = $user->id;
                 //forward the user to the show all todos page
