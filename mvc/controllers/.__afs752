@@ -133,7 +133,7 @@ class accountsController extends http\controller
                 $_SESSION["userID"] = $user->id;
                 $data = todos::findTasksbyID($_SESSION["userID"]);
                 self::getTemplate('all_tasks', $data);
-                
+                //forward the user to the show all todos page
                 
                 print_r($_SESSION);
                 
