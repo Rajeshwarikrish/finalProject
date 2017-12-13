@@ -12,7 +12,8 @@ class htmlTable
         $fieldHeadings = get_object_vars($fieldHeadings);
         $fieldHeadings = array_keys($fieldHeadings);
         //this gets the page being viewed so that the table routes requests to the correct controller
-        $referingPage = $_REQUEST['page'];
+        //$referingPage = $_REQUEST['page'];
+        $referingPage = 'tasks';
         foreach ($fieldHeadings as $heading) {
             $tableGen .= '<th>' . $heading . '</th>';
         }
@@ -21,7 +22,9 @@ class htmlTable
             $tableGen .= '<tr>';
             foreach ($record as $key => $value) {
                 if ($key == 'id') {
-                    $tableGen .= '<td><a href="index.php?page=' . $referingPage . '&action=show&id=' . $value . '">View</a></td>';
+                    $tableGen .= '<td><a href="index.php?page=' . $referingPage . '&action=show&id=' . $value . '">View</a><br>
+                    <a href="index.php?page=' . $referingPage . '&action=edit&id=' . $value . '">edit</a><br>
+                    <a href="index.php?page=' . $referingPage . '&action=delete&id=' . $value . '">delete</a></td>';
                 } else {
                     $tableGen .= '<td>' . $value . '</td>';
                 }

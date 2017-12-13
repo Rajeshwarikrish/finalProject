@@ -44,7 +44,6 @@ print_r($data);
     <button type="submit" form="form1" value="delete">Delete</button>
 </form>
 
-
 <script src="js/scripts.js"></script>
 </body>
 </html>
