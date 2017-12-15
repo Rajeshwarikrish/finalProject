@@ -91,7 +91,7 @@ class routes
         $route->action = 'edit';
         $route->page = 'accounts';
         $route->controller = 'accountsController';
-        $route->method = 'edit';
+        $route->method = 'save';
         $routes[] = $route;
         
         

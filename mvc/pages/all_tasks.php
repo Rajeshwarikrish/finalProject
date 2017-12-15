@@ -21,7 +21,9 @@
 //this is how you print something
 print utility\htmlTable::genarateTableFromMultiArray($data);
 ?>
+<br><h1><a href="index.php?page=accounts&action=edit&id=<?php echo $_SESSION['userID']; ?>">update profile</a></h1>
 
+<br><h1><a href="index.php?page=accounts&action=logout">logout</a></h1>
 
 <script src="js/scripts.js"></script>
 </body>
