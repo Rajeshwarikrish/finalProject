@@ -74,7 +74,7 @@ class accountsController extends http\controller
             //you may want to send the person to a
             // login page or create a session and log them in
             // and then send them to the task list page and a link to create tasks
-            header("Location: index.php?page=accounts&action=all");
+            header("Location: https://web.njit.edu/~rk633/finalProject/mvc/");
         } else {
             //You can make a template for errors called error.php
             // and load the template here with the error you want to show.
@@ -133,6 +133,7 @@ class accountsController extends http\controller
                 //echo '<br><h1>login successfull </h1> <br>';
                 session_start();
                 $_SESSION["userID"] = $user->id;
+                $_SESSION["email"] = $user->email;
                 header("Location: index.php?page=tasks&action=all");
                 
                 
