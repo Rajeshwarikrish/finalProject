@@ -63,15 +63,15 @@
 <form action="index.php?page=accounts&action=register" method="post">
   <div class="form-group">
     <label for="first name">First Name:</label>
-    <input type="text" class="form-control" name="fname" required>
+    <input type="text" class="form-control" name="fname" pattern=".{1,}" required>
   </div>
     <div class="form-group">
     <label for="last name">Last Name:</label>
-    <input type="text" class="form-control" name="lname" required>
+    <input type="text" class="form-control" name="lname" pattern=".{1,}" required>
   </div>
     <div class="form-group">
     <label for="email">Email address:</label>
-    <input type="email" class="form-control" name="email" required>
+    <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" class="form-control" name="email" required>
   </div>
     <div class="form-group">
     <label for="phone">Phone:</label>
@@ -87,7 +87,7 @@
   </div>
   <div class="form-group">
     <label for="password">Password:</label>
-    <input type="password" class="form-control" name="password" required>
+    <input type="password" class="form-control" pattern=".{6,}" name="password" required>
   </div>
   <button class="btn btn-primary btn-block" type="submit" class="btn btn-default">Submit Form</button>
 </form>

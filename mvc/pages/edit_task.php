@@ -64,7 +64,7 @@
 <form action="index.php?page=tasks&action=store&id=<?php echo $data->id; ?> " method="post">
   <div class="form-group">
     <label for="owneremail">Owner Email:</label>
-    <input type="email" class="form-control" name="owneremail" value=<?php echo $data->owneremail; ?> required>
+    <input type="email" class="form-control" name="owneremail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" value=<?php echo $data->owneremail; ?> required>
   </div>
     <div class="form-group">
     <label for="createddate">Created Date:</label>
@@ -80,7 +80,7 @@
   </div>
     <div class="form-group">
     <label for="isdone">isdone:</label>
-    <input type="text" class="form-control" name="isdone" value=<?php echo $data->isdone; ?> required>
+    <input type="number" min="0" max="1" class="form-control" name="isdone" value=<?php echo $data->isdone; ?> required>
   </div>
   <button class="btn btn-primary btn-block" type="submit" class="btn btn-default">Edit</button>
 </form>
