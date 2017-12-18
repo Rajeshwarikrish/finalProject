@@ -68,7 +68,7 @@ class accountsController extends http\controller
     public static function login()
     {   $user = accounts::findUserbyEmail($_REQUEST['uname']); 
         if ($user == FALSE) {
-            $data = 'user not found';
+            $data = 'Invalid User';
             self::getTemplate('error',$data);
         } else {
             if($user->checkPassword($_POST['psw']) == TRUE) {

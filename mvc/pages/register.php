@@ -41,7 +41,7 @@
   </style>
 </head>
 <body>
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse" >
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">TODO tasks</a>
@@ -58,7 +58,7 @@
 
     </div>
     <div class="col-sm-6 text-left"> 
-      <h1><p class="text-center">REGISTER</p></h1>
+      <h1><p class="text-center"><font color = "#C70039"> REGISTER </font></p></h1>
       <hr>
 <form action="index.php?page=accounts&action=register" method="post">
   <div class="form-group">
@@ -86,10 +86,16 @@
     <input type="text" class="form-control" name="gender" required>
   </div>
   <div class="form-group">
+  <div class="alert alert-info alert-dismissable">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>INFO! </strong> Password should be a minimum of six characters
+</div>
     <label for="password">Password:</label>
     <input type="password" class="form-control" pattern=".{6,}" name="password" required>
   </div>
-  <button class="btn btn-primary btn-block" type="submit" class="btn btn-default">Submit Form</button>
+  <center>
+  <button class="btn btn-primary" type="submit" class="btn btn-default">Register</button>
+  </center><br>
 </form>
        
     </div>

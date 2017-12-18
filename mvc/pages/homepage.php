@@ -58,9 +58,9 @@
     
     </div>
     <div class="col-sm-8 text-left"> 
-      <h1><p class="text-center"><b><font color ="#0d0d0d">LOGIN</font></b></p></h1>
+      <h1><p class="text-center"><b><font color ="#C70039">LOGIN</font></b></p></h1>
       <hr>
-<form action="index.php?page=accounts&action=login" method="POST">
+<form class="form-horizontal"action="index.php?page=accounts&action=login" method="POST">
   <div class="form-group">
     <label for="email"><font color ="#0d0d0d">Email address:</font></label>
     <input type="email" class="form-control" name="uname" required>

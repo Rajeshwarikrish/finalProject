@@ -67,7 +67,7 @@
     <input type="email" class="form-control" name="owneremail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" value=<?php echo $data->owneremail; ?> required>
   </div>
     <div class="form-group">
-    <label for="createddate">Created Date:</label>
+    <label for="createddate">DateUpdated:</label>
     <input type="text" class="form-control" name="createddate" value=<?php echo $data->createddate; ?> readonly>
   </div>
     <div class="form-group">
