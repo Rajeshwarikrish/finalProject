@@ -15,14 +15,23 @@
     .row.content {height: 550px}
     .sidenav {
       padding-top: 20px;
-      background-color: #f1f1f1;
+      background-color: #F1F1F1 ;
       height: 100%;
     }
     footer {
-      background-color: #0d0d0d;
+      background-color:#C70039;
       color: white;
       padding: 15px;
     }
+    .navbar
+    {  background: #C70039;
+       color: white;
+    }
+     .btn
+  {  background: #C70039  ;
+     color:white;
+  }  
+ 
     @media screen and (max-width: 767px) {
       .sidenav {
         height: auto;
@@ -39,35 +48,35 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="#">TODO tasks</a>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-      </ul>
-    </div>
+    
   </div>
 </nav>
   
 <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-2 sidenav">
-
+    
     </div>
     <div class="col-sm-8 text-left"> 
-      <h1><p class="text-center">LOGIN</p></h1>
+      <h1><p class="text-center"><b><font color ="#0d0d0d">LOGIN</font></b></p></h1>
       <hr>
 <form action="index.php?page=accounts&action=login" method="POST">
   <div class="form-group">
-    <label for="email">Email address:</label>
+    <label for="email"><font color ="#0d0d0d">Email address:</font></label>
     <input type="email" class="form-control" name="uname" required>
   </div>
   <div class="form-group">
-    <label for="pwd">Password:</label>
+    <label for="pwd"><font color ="#0d0d0d">Password:</font></label>
     <input type="password" class="form-control" name="psw" required>
   </div>
-  <button type="submit" class="btn btn-default">Submit</button>
+  <center>
+  <button type="submit" class="btn btn-primary"><b>SUBMIT</b></button>
+  </center>
 </form>
        <hr>
-       <h2><p class="text-center"><a class="btn btn-primary" href="index.php?page=accounts&action=register">Register</a></p></h2>
+       <h2><p class="text-center">  <font color ="#0d0d0d"> Not registered yet? </font><br><br>
+       <a class="btn btn-primary" href="index.php?page=accounts&action=register">
+       <b>REGISTER</b></a></p></h2>
     </div>
     <div class="col-sm-2 sidenav">
     </div>
@@ -75,7 +84,7 @@
 </div>
 
 <footer class="container-fluid text-center">
-  <p>Web Systems Development Final Project</p>
+  <p>Web Systems Development Project</p>
 </footer>
 
 </body>

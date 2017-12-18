@@ -11,7 +11,37 @@ class htmlTable
         $tableGen .= '<meta name="viewport" content="width=device-width, initial-scale=1">';
         $tableGen .= '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">';
         $tableGen .= '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>';
-        $tableGen .= '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script><style>th, td {padding: 6px; text-align: left;
+        $tableGen .= '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script><style> .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    .row.content {height: 550px}
+    .sidenav {
+      padding-top: 20px;
+      background-color: #F1F1F1 ;
+      height: 100%;
+    }
+    footer {
+      background-color:#C70039;
+      color: white;
+      padding: 15px;
+    }
+    .navbar
+    {  background: #C70039;
+       color: white;
+    }
+     .btn
+  {  background: #C70039  ;
+     color:white;
+  }  
+ 
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }th, td {padding: 6px; text-align: left;
      }</style></head>';
         $tableGen .= '<div class="container">';
         $tableGen .= '<body><table border="1" class="table-striped">';

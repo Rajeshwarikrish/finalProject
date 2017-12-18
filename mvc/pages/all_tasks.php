@@ -8,22 +8,29 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style> 
-    .navbar {
+   .navbar {
       margin-bottom: 0;
       border-radius: 0;
+      background: #C70039;
+      color: white;
+    
     }
-    .row.content {height: 600px} 
+    .row.content {height: 700px}
     .sidenav {
       padding-top: 20px;
       background-color: #f1f1f1;
       height: 100%;
     }
-    
     footer {
-      background-color: #555;
+      background-color: #C70039;
       color: white;
       padding: 15px;
     }
+        .btn
+  {  background: #C70039  ;
+     color:white;
+  }  
+ 
     @media screen and (max-width: 767px) {
       .sidenav {
         height: auto;
@@ -41,11 +48,8 @@
       <a class="navbar-brand" href="#">TODO tasks</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-      </ul>
           <ul class="nav navbar-nav navbar-right">
-      <li><a href="index.php?page=accounts&action=edit&id=<?php echo $_SESSION['userID']; ?>""><span class="glyphicon glyphicon-user"></span> Update Profile</a></li>
+      <li><a href="index.php?page=accounts&action=edit&id=<?php echo $_SESSION['userID']; ?>"><span class="glyphicon glyphicon-user"></span> Update Profile</a></li>
       <li><a href="index.php?page=accounts&action=logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
     </ul>
     </div>

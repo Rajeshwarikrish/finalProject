@@ -11,6 +11,9 @@
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
+      background: #C70039;
+      color: white;
+    
     }
     .row.content {height: 700px}
     .sidenav {
@@ -19,10 +22,15 @@
       height: 100%;
     }
     footer {
-      background-color: #555;
+      background-color: #C70039;
       color: white;
       padding: 15px;
     }
+        .btn
+  {  background: #C70039  ;
+     color:white;
+  }  
+ 
     @media screen and (max-width: 767px) {
       .sidenav {
         height: auto;
@@ -39,9 +47,7 @@
       <a class="navbar-brand" href="#">TODO tasks</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Register</a></li>
-      </ul>
+     
     </div>
   </div>
 </nav>

@@ -3,213 +3,89 @@ class routes
 {
     public static function getRoutes()
     {
-        $route = new route();
-        $route->http_method = 'GET';
-        $route->page = 'homepage';
-        $route->action = 'show';
-        $route->controller = 'homepageController';
-        $route->method = 'show';
-        $routes[] = $route;
-        $route = new route();
-        $route->http_method = 'POST';
-        $route->action = 'create';
-        $route->page = 'homepage';
-        $route->controller = 'homepageController';
-        $route->method = 'create';
-        $routes[] = $route;
-
-        $route = new route();
-        $route->http_method = 'GET';
-        $route->action = 'all';
-        $route->page = 'accounts';
-        $route->controller = 'accountsController';
-        $route->method = 'all';
-        $routes[] = $route;
-
-        $route = new route();
-        $route->http_method = 'GET';
-        $route->action = 'show';
-        $route->page = 'accounts';
-        $route->controller = 'accountsController';
-        $route->method = 'show';
-        $routes[] = $route;
+        //GET method index.php?page=homepage&action=show 
+        $routes[] = self::create('GET','show','homepage','homepageController','show');
         
-        $route = new route();
-        $route->http_method = 'POST';
-        $route->action = 'login';
-        $route->page = 'accounts';
-        $route->controller = 'accountsController';
-        $route->method = 'login';
-        $routes[] = $route;
+   
+        //POST method index.php?page=homepage&action=create
+        $routes[] = self::create('POST','create','homepage','homepageController','create');
+  
+        //GET METHOD index.php?page=accounts&action=all
+        $routes[] = self::create('GET','all','accounts','accountsController','all');
         
-        $route = new route();
-        $route->http_method = 'POST';
-        $route->action = 'delete';
-        $route->page = 'accounts';
-        $route->controller = 'accountsController';
-        $route->method = 'delete';
-        $routes[] = $route;
+        //GET METHOD index.php?page=accounts&action=show
+        $routes[] = self::create('GET','show','accounts','accountsController','show');
         
-        $route = new route();
-        $route->http_method = 'GET';
-        $route->action = 'edit';
-        $route->page = 'accounts';
-        $route->controller = 'accountsController';
-        $route->method = 'edit';
-        $routes[] = $route;
+        //GET METHOD index.php?page=accounts&action=login
+        $routes[] = self::create('POST','login','accounts','accountsController','login');
         
-        $route = new route();
-        $route->http_method = 'POST';
-        $route->action = 'edit';
-        $route->page = 'accounts';
-        $route->controller = 'accountsController';
-        $route->method = 'save';
-        $routes[] = $route;
+        //POST method for index.php?page=accounts&action=delete
+        $routes[] = self::create('POST','delete','accounts','accountsController','delete');
+              
+        //GET method for index.php?page=accounts&action=edit 
+        $routes[] = self::create('GET','edit','accounts','accountsController','edit');
+                
+        //POST method for index.php?page=accounts&action=edit
+        $routes[] = self::create('POST','edit','accounts','accountsController','save');
+                        
+        //GET method for index.php?page=accounts&action=store  
+        $routes[] = self::create('GET','store','accounts','accountsController','store');        
+                
+        //POST method for index.php?page=accounts&action=store
+        $routes[] = self::create('POST','store','accounts','accountsController','store');  
         
-        $route = new route();
-        $route->http_method = 'GET';
-        $route->action = 'store';
-        $route->page = 'accounts';
-        $route->controller = 'accountssController';
-        $route->method = 'store';
-        $routes[] = $route;
+        //GET method for index.php?page=accounts&action=save  
+        $routes[] = self::create('GET','save','accounts','accountsController','save');        
         
-        $route = new route();
-        $route->http_method = 'POST';
-        $route->action = 'store';
-        $route->page = 'accounts';
-        $route->controller = 'accountsController';
-        $route->method = 'store';
-        $routes[] = $route;
+        //POST method for index.php?page=accounts&action=save
+        $routes[] = self::create('POST','save','accounts','accountsController','save');
         
-        $route = new route();
-        $route->http_method = 'GET';
-        $route->action = 'register';
-        $route->page = 'accounts';
-        $route->controller = 'accountsController';
-        $route->method = 'register';
-        $routes[] = $route;
-
-        $route = new route();
-        $route->http_method = 'POST';
-        $route->action = 'register';
-        $route->page = 'accounts';
-        $route->controller = 'accountsController';
-        $route->method = 'store';
-        $routes[] = $route;
-
-        $route = new route();
-        $route->http_method = 'GET';
-        $route->action = 'show';
-        $route->page = 'tasks';
-        $route->controller = 'tasksController';
-        $route->method = 'show';
-        $routes[] = $route;
+        //this is the route for the reg form
+        $routes[] = self::create('GET','register','accounts','accountsController','register');
         
-        $route = new route();
-        $route->http_method = 'GET';
-        $route->action = 'all';
-        $route->page = 'tasks';
-        $route->controller = 'tasksController';
-        $route->method = 'all';
-        $routes[] = $route;
+        //this handles the reg post to create the user
+        $routes[] = self::create('POST','register','accounts','accountsController','store');
+        //GET METHOD index.php?page=tasks&action=show
+        $routes[] = self::create('GET','show','tasks','tasksController','show');
         
-        $route = new route();
-        $route->http_method = 'GET';
-        $route->action = 'delete';
-        $route->page = 'tasks';
-        $route->controller = 'tasksController';
-        $route->method = 'delete';
-        $routes[] = $route;
+        //GET METHOD index.php?page=tasks&action=all
+        $routes[] = self::create('GET','all','tasks','tasksController','all');
         
-        $route = new route();
-        $route->http_method = 'POST';
-        $route->action = 'delete';
-        $route->page = 'tasks';
-        $route->controller = 'tasksController';
-        $route->method = 'delete';
-        $routes[] = $route;
+        //GET method for index.php?page=tasks&action=delete
+        $routes[] = self::create('GET','delete','tasks','tasksController','delete');        
         
-        $route = new route();
-        $route->http_method = 'GET';
-        $route->action = 'edit';
-        $route->page = 'tasks';
-        $route->controller = 'tasksController';
-        $route->method = 'edit';
-        $routes[] = $route;
+        //POST method for index.php?page=tasks&action=delete
+        $routes[] = self::create('POST','delete','tasks','tasksController','delete');
         
-        $route = new route();
-        $route->http_method = 'POST';
-        $route->action = 'edit';
-        $route->page = 'tasks';
-        $route->controller = 'tasksController';
-        $route->method = 'edit';
-        $routes[] = $route;
+        //GET method for index.php?page=tasks&action=edit 
+        $routes[] = self::create('GET','edit','tasks','tasksController','edit');
         
-        $route = new route();
-        $route->http_method = 'GET';
-        $route->action = 'store';
-        $route->page = 'tasks';
-        $route->controller = 'tasksController';
-        $route->method = 'store';
-        $routes[] = $route;
+        //POST method for index.php?page=tasks&action=edit
+        $routes[] = self::create('POST','edit','tasks','tasksController','edit');
         
-        $route = new route();
-        $route->http_method = 'POST';
-        $route->action = 'store';
-        $route->page = 'tasks';
-        $route->controller = 'tasksController';
-        $route->method = 'store';
-        $routes[] = $route;
+        //GET method for index.php?page=tasks&action=store  
+        $routes[] = self::create('GET','store','tasks','tasksController','store');
         
-        $route = new route();
-        $route->http_method = 'GET';
-        $route->action = 'create';
-        $route->page = 'tasks';
-        $route->controller = 'tasksController';
-        $route->method = 'create';
-        $routes[] = $route;
+        //POST method for index.php?page=tasks&action=store
+        $routes[] = self::create('POST','store','tasks','tasksController','store');
         
-        $route = new route();
-        $route->http_method = 'POST';
-        $route->action = 'create';
-        $route->page = 'tasks';
-        $route->controller = 'tasksController';
-        $route->method = 'create';
-        $routes[] = $route;
+        //GET METHOD index.php?page=tasks&action=create
+        $routes[] = self::create('GET','create','tasks','tasksController','create');
         
-        $route = new route();
-        $route->http_method = 'GET';
-        $route->action = 'save';
-        $route->page = 'tasks';
-        $route->controller = 'tasksController';
-        $route->method = 'save';
-        $routes[] = $route;
+        //POST METHOD index.php?page=tasks&action=create
+        $routes[] = self::create('POST','create','tasks','tasksController','create');
         
-        $route = new route();
-        $route->http_method = 'POST';
-        $route->action = 'save';
-        $route->page = 'tasks';
-        $route->controller = 'tasksController';
-        $route->method = 'save';
-        $routes[] = $route;
+        //GET METHOD index.php?page=tasks&action=save
+        $routes[] = self::create('GET','save','tasks','tasksController','save');
         
-        $route = new route();
-        $route->http_method = 'GET';
-        $route->action = 'logout';
-        $route->page = 'accounts';
-        $route->controller = 'accountsController';
-        $route->method = 'logout';
-        $routes[] = $route;
+        //POST METHOD index.php?page=tasks&action=save
+        $routes[] = self::create('POST','save','tasks','tasksController','save');
         
-        $route = new route();
-        $route->http_method = 'POST';
-        $route->action = 'logout';
-        $route->page = 'accounts';
-        $route->controller = 'accountsController';
-        $route->method = 'logout';
-        $routes[] = $route;
-        
+        //GET method for index.php?page=tasks&action=logout
+        $routes[] = self::create('GET','logout','accounts','accountsController','logout');
+        //POST method for index.php?page=tasks&action=delete
+        $routes[] = self::create('POST','logout','accounts','accountsController','logout');
+       
         return $routes;
     }
     
@@ -220,11 +96,12 @@ class routes
         $route->page = $page;
         $route->controller = $controller;
         $route->method = $method;
+        return $route;
     }
 }
-
 class route
 {
+    public $http_method;
     public $page;
     public $action;
     public $method;
