@@ -59,13 +59,11 @@
     <div class="col-sm-8 text-left"> 
       <h1><p class="text-center" class="text-warning"><font color = "#C70039">ERROR REPORT</font></p></h1>
       <hr>
-      <center><h3><div class="alert alert-danger">
-  <strong>WARNING! </strong><?php echo $data ?><a href="https://web.njit.edu/~rk633/finalProject/mvc/" class="alert-link">  CLICK HERE TO TRY AGAIN</a>
-  </h3></center></div>
-      
-   <!--  <center><a href="https://web.njit.edu/~rk633/finalProject/mvc/" class="btn-info btn-lg">BACK</a></center>
-    </div>-->
-    
+      <center><h3>
+      <div class="alert alert-danger">
+        <strong>WARNING! </strong><?php echo $data ?><a href="https://web.njit.edu/~rk633/finalProject/mvc/" class="alert-link">  CLICK HERE TO TRY AGAIN</a>
+        </h3></center>
+      </div>   
     <div class="col-sm-2 sidenav">
     </div>
   </div>

@@ -70,7 +70,7 @@
     <input type="password" class="form-control" name="psw" required>
   </div>
   <center>
-  <button type="submit" class="btn btn-primary"><b>SUBMIT</b></button>
+    <button type="submit" class="btn btn-primary"><b>SUBMIT</b></button>
   </center>
 </form>
        <hr>

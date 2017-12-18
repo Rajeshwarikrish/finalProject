@@ -71,8 +71,12 @@
     <label for="createddate">Created Date:</label>
     <input type="text" class="form-control" name="createddate" value=<?php echo date('Y-m-d')?> readonly>
   </div>
+  <div class="alert alert-info alert-dismissable">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>INFO! </strong> The Date should be of format YYYY-MM-DD only
+  </div>
     <div class="form-group">
-    <label for="duedate">Due Date(yyyy-mm-dd):</label>
+    <label for="duedate">Due Date:</label>
     <input type="text" class="form-control" name="duedate" required>
   </div>
     <div class="form-group">
@@ -83,7 +87,9 @@
     <label for="isdone">isdone:</label>
     <input type="number" min="0" max="1" class="form-control" name="isdone" required>
   </div>
-  <button class="btn btn-primary btn-block" type="submit" >Create</button>
+  <center>
+    <button class="btn btn-primary" type="submit" >Create Task</button>
+  </center>
 </form>
        
     </div>

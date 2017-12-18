@@ -78,7 +78,11 @@
     <input type="text" class="form-control" name="phone" required>
   </div>
     <div class="form-group">
-    <label for="birthday">Birthday:</label>
+    <div class="alert alert-info alert-dismissable">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>INFO! </strong> The Date Of Birth should be of format YYYY-MM-DD
+  </div>
+    <label for="birthday">Date Of Birth:</label>
     <input type="text" class="form-control" name="birthday" required>
   </div>
     <div class="form-group">
@@ -89,12 +93,12 @@
   <div class="alert alert-info alert-dismissable">
   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
   <strong>INFO! </strong> Password should be a minimum of six characters
-</div>
+  </div>
     <label for="password">Password:</label>
     <input type="password" class="form-control" pattern=".{6,}" name="password" required>
   </div>
   <center>
-  <button class="btn btn-primary" type="submit" class="btn btn-default">Register</button>
+    <button class="btn btn-primary" type="submit" class="btn btn-default">Register</button>
   </center><br>
 </form>
        

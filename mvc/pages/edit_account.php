@@ -59,7 +59,7 @@
 
     </div>
     <div class="col-sm-6 text-left"> 
-      <h1><p class="text-center">UPDATE PROFILE</p></h1>
+      <h1><p class="text-center"><font color = "#C70039">UPDATE PROFILE</font></p></h1>
       <hr>
 <form action="index.php?page=accounts&action=save&id=<?php echo $_SESSION['userID']; ?> " method="post">
   <div class="form-group">
@@ -74,12 +74,12 @@
     <label for="email">Email address:</label>
     <input type="email" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" value=<?php echo $data->email; ?> required>
   </div>
-    <div class="form-group">
+  <div class="form-group">
     <label for="phone">Phone:</label>
     <input type="text" class="form-control" name="phone" value=<?php echo $data->phone; ?> required>
   </div>
     <div class="form-group">
-    <label for="birthday">Birthday:</label>
+    <label for="birthday">Date Of Birth:</label>
     <input type="text" class="form-control" name="birthday" value=<?php echo $data->birthday; ?> required>
   </div>
     <div class="form-group">
@@ -90,9 +90,10 @@
     <label for="password">Password:</label>
     <input type="password" class="form-control" name="password" pattern=".{6,}" value='' required>
   </div>
-  <button class="btn btn-primary btn-block" type="submit" class="btn btn-default">Submit Form</button>
-</form>
-       
+   <center>
+    <button class="btn btn-primary" type="submit" class="btn btn-default">Update Profile</button>
+  </center><br>
+</form>    
     </div>
     <div class="col-sm-3 sidenav">
     </div>

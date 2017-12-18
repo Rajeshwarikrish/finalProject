@@ -2,7 +2,7 @@
 namespace utility;
 class htmlTable
 {
-    public static function genarateTableFromMultiArray($array)
+  public static function genarateTableFromMultiArray($array)
     {
         $tableGen = '<!DOCTYPE html>';
         $tableGen .= '<html lang="en">';

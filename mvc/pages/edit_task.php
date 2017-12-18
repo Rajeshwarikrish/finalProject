@@ -70,9 +70,13 @@
     <label for="createddate">DateUpdated:</label>
     <input type="text" class="form-control" name="createddate" value=<?php echo $data->createddate; ?> readonly>
   </div>
+  <div class="alert alert-info alert-dismissable">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>INFO! </strong> The Date should be of format YYYY-MM-DD only
+  </div>
     <div class="form-group">
     <label for="duedate">Due Date:</label>
-    <input type="text" class="form-control" name="duedate" value=<?php echo $data->duedate; ?> readonly>
+    <input type="text" class="form-control" name="duedate" value=<?php echo $data->duedate; ?> required>
   </div>
     <div class="form-group">
     <label for="message">Message:</label>
@@ -82,7 +86,9 @@
     <label for="isdone">isdone:</label>
     <input type="number" min="0" max="1" class="form-control" name="isdone" value=<?php echo $data->isdone; ?> required>
   </div>
-  <button class="btn btn-primary btn-block" type="submit" class="btn btn-default">Edit</button>
+  <center>
+    <button class="btn btn-primary " type="submit" class="btn btn-default">Edit</button>
+  </center><br>
 </form>
        
     </div>
